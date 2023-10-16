@@ -21,6 +21,8 @@ use App\Services\Newsletter;
 |
 */
 
-Route::get('/', [PostController::class, 'index'])->name('home');
+Route::get('/', function() {
+    return 'hello';
+})->name('home');
 
 

@@ -67,5 +67,37 @@ i have created 5 post with 1 parent of it
 
 in it has is used for hasOne, hasMany relation and for is used for belonging
 
+6- Video (Maintenance Mode Secrets)
+
+php artisan down
+use for down the server for maintanance
+
+php artisan up
+use for up the server
+
+php artisan down --secret=afzal
+if you want to down the server but you whitelist youself so use this command
+
+http://127.0.0.1:8000/
+if you use this link it will show the server down
+
+http://127.0.0.1:8000/afzal
+if you use this secret key which is store in cookies it will give access then
+
+if we install the composer then it can break the maintance view thats its important to render the view
+
+php artisan down --render='maintainance'
+if you want to render you own error then you can do it like this.
+make the view in view folder
+
+php artisan down --render='errors::503'
+if you want by default one so use like this
+
+php artisan vendor:publish
+you can publish laravel errors and make a full controll on it
+
+
+
+
 
 
