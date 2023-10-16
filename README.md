@@ -43,3 +43,29 @@ App\Models\User::factory()->admin()->make();
 App\Models\User::factory()->subscribe()->make();
 
 by default it will false but when you make factory with admin or subscribe then it will call it
+
+Videp 5 (Model Factory Relationships)
+
+To use two models at a time
+use App\Models\{User,Post}
+
+when you want to create a relations row
+User::factory()->has(Post::factory()->count(5))->create()
+
+shortcut
+User::factory()->hasPosts(5)->create()
+
+i have created one user and in relation i used 5 post with it
+
+when you want to create parent relation data with child
+Post::factory()->for(User::factory())->count(5)->create()
+
+shortcut
+Post::factory()->forUser->count(5)->create()
+
+i have created 5 post with 1 parent of it
+
+in it has is used for hasOne, hasMany relation and for is used for belonging
+
+
+
