@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\GiftCertificatePurchased;
 use App\Http\Controllers\Admin\PostController as AdminPostController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -22,7 +23,7 @@ use App\Services\Newsletter;
 */
 
 Route::get('/', function() {
-    return 'hello';
-})->name('home');
+    event(new GiftCertificatePurchased());
+});
 
 

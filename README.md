@@ -67,7 +67,7 @@ i have created 5 post with 1 parent of it
 
 in it has is used for hasOne, hasMany relation and for is used for belonging
 
-6- Video (Maintenance Mode Secrets)
+6-Video (Maintenance Mode Secrets)
 
 php artisan down
 use for down the server for maintanance
@@ -95,6 +95,12 @@ if you want by default one so use like this
 
 php artisan vendor:publish
 you can publish laravel errors and make a full controll on it
+
+7-video (Cleaner Closure-Based Event Listeners)
+how to make events route and create new event and lsiten it in the events route and then queue it in closure but i didn't get it
+
+commnad of making event
+php artisan make:event GiftCertificatePurchased
 
 
 
