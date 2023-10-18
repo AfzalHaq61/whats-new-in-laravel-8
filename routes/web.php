@@ -27,3 +27,11 @@ Route::get('/', function() {
 });
 
 
+Route::get('/foo', function() {
+    return 'bar';
+});
+
+Route::get('download', function() {
+    return 'Some file download()';
+})->middleware('throttle:download');
+

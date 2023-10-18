@@ -107,6 +107,27 @@ some thing in phptest but i dont have expertie in tests
 $this->travel(-1)->month
 this will move forword you
 
+9-Video (Improved Rate Limiting)
+
+YOu can limit route accessing like the user can inly access some routes some limit per time
+by default the limit is apply on api routes 60 per minute
+you can see it in kernal and route serverce provider
+
+i have applied throttle middelware which have name download on this route
+Route::get('download', function() {
+    return 'Some file download()';
+})->middleware('throttle:download');
+
+in route service provide in boot method i have apply my logic on download limit throttle 3 per minute
+RateLimiter::for('download', function () {
+            return Limit::perMinute(3);
+        });
+        
+Laracast Download logic
+RateLimiter::for('download', function (Request $request) {
+    return $request->user()->isForever() ? Limit::none() : Limit::perMinute(3);
+});
+
 
 
 
