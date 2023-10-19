@@ -128,6 +128,12 @@ RateLimiter::for('download', function (Request $request) {
     return $request->user()->isForever() ? Limit::none() : Limit::perMinute(3);
 });
 
+10-Video (Jetstream)
+
+just installation
+
+11-Video (Upgrade the Laracasts Codebase to Laravel 8)
+
 
 
 
